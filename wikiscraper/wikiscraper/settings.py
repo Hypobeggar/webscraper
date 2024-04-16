@@ -22,7 +22,7 @@ ROBOTSTXT_OBEY = True
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
-DEPTH_LIMIT= 1 # Required implemention of depth limit
+DEPTH_LIMIT= 4 # Required implemention of depth limit
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
@@ -31,7 +31,7 @@ DOWNLOAD_DELAY = 3
 # The download delay setting will honor only one of:
 CONCURRENT_REQUESTS_PER_DOMAIN = 8
 CONCURRENT_REQUESTS_PER_IP = 8
-
+CLOSESPIDER_PAGECOUNT= 4 # Required max pages
 # Disable cookies (enabled by default)
 #COOKIES_ENABLED = False
 
