@@ -10,3 +10,18 @@ The solution Webscraper provides are components consisting of a Scrapy-based web
 
 ## Design
 The webcrawler uses an initial seed, max pages, and max depth. AutoThrottle is utilized for concurrenet crawling. The crawler can be used to crawl websites for their html and Wikipedia for its table of contents. The indexer uses Scikit-Learn to provide inverted index construction. Pickle is used to serialize and deserialize the constructed index. It provides a pickle file of the index in the current directory. Webscraper's processor can handle json data and be used to rank the data based on the similarity to the query. 
+
+## Architecture
+The main archictecture for Webscraper consists of Scrapy, Scikit-Learn, Pickle, and Flask. Other libraries used are Collections, NumPy, and Pathlib. They are used for  indexer, processor,and crawler, respectively. They server crucial roles in 
+
+## Operation
+
+## Conclusion
+
+## Data Sources
+
+## Test Cases
+
+## Source Code
+
+## Bibliography
