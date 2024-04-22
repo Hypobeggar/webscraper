@@ -1,5 +1,7 @@
 from flask import Flask, request, jsonify
-
+import numpy as np
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
 app = Flask(__name__)
 
@@ -10,12 +12,27 @@ sample_data = [
     {'id': 3, 'title': 'The Stairs', 'description': 'The stairs'}
 ]
 
-def process_query(query_text, top_k=3):
-    if not query_text:
+def process_query(text, top_k=3):
+    if not text:
         return {'error': 'Query is empty or missing'}
 
-    ranked_results = sorted(sample_data, key=lambda x: len(x['description']), reverse=True)[:top_k]
-    return {'results': ranked_results}
+    
+    descriptions = [data['description'] for data in sample_data]
+
+   
+    vectorizer = TfidfVectorizer()
+    tfidf_matrix = vectorizer.fit_transform([text] + descriptions)
+
+
+    vector = tfidf_matrix[0]
+    description_vectors = tfidf_matrix[1:]
+    similarities = cosine_similarity(vector, description_vectors)
+
+
+    index = np.argsort(similarities[0])[::-1][:top_k]
+    results = [sample_data[i] for i in index]
+
+    return {'results': results}
 
 @app.route('/query', methods=['POST']) # AiAgent ChatGPT
 def handle_query():
