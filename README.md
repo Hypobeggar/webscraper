@@ -45,11 +45,21 @@ All data sources are held within the code. The base code and provided command(s)
 
 ## Source Code
 The dependencies for Webscraper are Scrapy 2.11+, Scikit-Learn 1.2+, Pickle, Flask 2.2+, Collections, NumPy, and Pathlib. Python 3.10+ is required.
+This portion of the wiki_spider.py program is used parse and save the html from the initial seed. The code after reads the table of contents.
 ```
     def parse(self, response): 
         page = response.url.split("/")[-1]
         filename = f"Wiki-{page}.html" 
         Path(filename).write_bytes(response.body) 
         self.log(f"Saved file {filename}") 
+```
+
+The following code from indexer.py serializes the inverted index using pickle.
+```
+    def serialize(self, vectorizer_filename, matrix_filename):
+        with open(vectorizer_filename, "wb") as vectorizer_file:
+            pickle.dump(self.tfidf_vectorizer, vectorizer_file)
+        with open(matrix_filename, "wb") as matrix_file:
+            pickle.dump(self.tfidf_matrix, matrix_file)
 ```
 ## Bibliography
