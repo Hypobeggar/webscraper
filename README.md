@@ -33,12 +33,12 @@ Webscraper is currently separated in its features. Manual input is required for 
 
 ## Data Sources
 The only data sources are the information for the libraries. The library links are:
-Scrapy- https://scrapy.org/
-Scikit-Learn- https://scikit-learn.org/stable/index.html
-Pickle- https://docs.python.org/3/library/pickle.html
-Flask- https://flask.palletsprojects.com/en/3.0.x/
-NumPy- https://numpy.org/
-Pathlib- https://docs.python.org/3/library/pathlib.html
+Scrapy- https://scrapy.org/ <br>
+Scikit-Learn- https://scikit-learn.org/stable/index.html <br>
+Pickle- https://docs.python.org/3/library/pickle.html <br>
+Flask- https://flask.palletsprojects.com/en/3.0.x/ <br>
+NumPy- https://numpy.org/ <br>
+Pathlib- https://docs.python.org/3/library/pathlib.html <br>
 
 ## Test Cases
 All data sources are held within the code. The base code and provided command(s) can be used as a test case.
