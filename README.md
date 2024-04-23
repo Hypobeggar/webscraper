@@ -5,16 +5,16 @@ indexer.py
 wikiscraper/processor.py
 
 ## Abstract
-Webscraper consists of several python programs including a webcrawler, indexer, and query processor. The webcrawler is Scrapy based and is used to scrape Wikipedia tables of content. It also downloads the web documents in html format. The indexer uses Scikit-Learn and pickle to create an inverted index and serialize it respectively. The index has TF-IDF score representation and Cosine similarity. Webscraper's processor is Flask-based. It is used to handle json queries and provide the Top-K ranked results. Future endeavors consist of increasing the integration between the files. Currently, each program works individually. Eventually, you could index the results from the webscraping and process the data to query.
+Webscraper consists of several python programs including a web crawler, indexer, and query processor. The webcrawler is Scrapy based and is used to scrape Wikipedia tables of content. It also downloads the web documents in html format. The indexer uses Scikit-Learn and pickle to create an inverted index and serialize it respectively. The index has TF-IDF score representation and Cosine similarity. Webscraper's processor is Flask-based. It is used to handle json queries and provide the Top-K ranked results. Future endeavors consist of increasing the integration between the files. Currently, each program works individually. Eventually, you could index the results from the web scraping and process the data to query.
 
 ## Overview
 The solution Webscraper provides are components consisting of a Scrapy-based webcrawler, Scikit-Learn based indexer, and Flask-based processor. Each component has a purpose and could connect with each other. The webcrawler can provide information crawled from the wikipedia website. The indexer can convert information, such as that provided by the crawler, into an inverted index. The processor could process information in a json format to be used for queries and ranking.
 
 ## Design
-The webcrawler uses an initial seed, max pages, and max depth. AutoThrottle is utilized for concurrenet crawling. The crawler can be used to crawl websites for their html and Wikipedia for its table of contents. The html is saved to the current directory. The indexer uses Scikit-Learn to provide inverted index construction. Pickle is used to serialize and deserialize the constructed index. It provides a pickle file of the index in the current directory. Webscraper's processor can handle json data and be used to rank the data based on the similarity to the query. 
+The web crawler uses an initial seed, max pages, and max depth. AutoThrottle is utilized for concurrent crawling. The crawler can be used to crawl websites for their html and Wikipedia for its table of contents. The html is saved to the current directory. The indexer uses Scikit-Learn to provide inverted index construction. Pickle is used to serialize and deserialize the constructed index. It provides a pickle file of the index in the current directory. Webscraper's processor can handle json data and be used to rank the data based on the similarity to the query. 
 
 ## Architecture
-The main archictecture for Webscraper consists of Scrapy, Scikit-Learn, Pickle, and Flask. Other libraries used are Collections, NumPy, and Pathlib. They are used for  indexer, processor,and crawler, respectively. They serve important roles in the core features.
+The main architecture for Webscraper consists of Scrapy, Scikit-Learn, Pickle, and Flask. Other libraries used are Collections, NumPy, and Pathlib. They are used for  indexer, processor,and crawler, respectively. They serve important roles in the core features.
 
 ## Operation
 ### Installation
@@ -29,7 +29,7 @@ curl -X POST -H "Content-Type: application/json" -d '{"query": "fair"}' http://l
 Changing the value to the key/ value pair for "query" changes your query.
 
 ## Conclusion
-Webscraper is currently separated in its features. Manual input is required for interaction between their functions. I was unable to create seamleass use between the components. However, each of the components work properly separately. When changed from Wikipedia articles, the portion of the crawler that searches the table of contents will prevent proper use.
+Webscraper is currently separated in its features. Manual input is required for interaction between their functions. I was unable to create seamless use between the components. However, each of the components work properly separately. When changed from Wikipedia articles, the portion of the crawler that searches the table of contents will prevent proper use.
 
 ## Data Sources
 The only data sources are the information for the libraries. The library links are: <br>
@@ -69,3 +69,5 @@ NumPy. Accessed April 22, 2024. https://numpy.org/. <br>
 “Pathlib - Object-Oriented Filesystem Paths.” Python documentation. Accessed April 22, 2024. https://docs.python.org/3/library/pathlib.html. <br>
 “Pickle - Python Object Serialization.” Python documentation. Accessed April 22, 2024. https://docs.python.org/3/library/pickle.html. <br>
 “Scikit-Learn.” scikit. Accessed April 22, 2024. https://scikit-learn.org/stable/index.html. <br>
+
+
