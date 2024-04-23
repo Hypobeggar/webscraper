@@ -63,9 +63,9 @@ The following code from indexer.py serializes the inverted index using pickle.
             pickle.dump(self.tfidf_matrix, matrix_file)
 ```
 ## Bibliography
-“A Fast and Powerful Scraping and Web Crawling Framework.” Scrapy. Accessed April 22, 2024. https://scrapy.org/. 
-“Flask.” Welcome to Flask - Flask Documentation (3.0.x). Accessed April 22, 2024. https://flask.palletsprojects.com/en/3.0.x/. 
-NumPy. Accessed April 22, 2024. https://numpy.org/. 
-“Pathlib - Object-Oriented Filesystem Paths.” Python documentation. Accessed April 22, 2024. https://docs.python.org/3/library/pathlib.html. 
-“Pickle - Python Object Serialization.” Python documentation. Accessed April 22, 2024. https://docs.python.org/3/library/pickle.html. 
-“Scikit-Learn.” scikit. Accessed April 22, 2024. https://scikit-learn.org/stable/index.html. 
+“A Fast and Powerful Scraping and Web Crawling Framework.” Scrapy. Accessed April 22, 2024. https://scrapy.org/. <br>
+“Flask.” Welcome to Flask - Flask Documentation (3.0.x). Accessed April 22, 2024. https://flask.palletsprojects.com/en/3.0.x/. <br>
+NumPy. Accessed April 22, 2024. https://numpy.org/. <br>
+“Pathlib - Object-Oriented Filesystem Paths.” Python documentation. Accessed April 22, 2024. https://docs.python.org/3/library/pathlib.html. <br>
+“Pickle - Python Object Serialization.” Python documentation. Accessed April 22, 2024. https://docs.python.org/3/library/pickle.html. <br>
+“Scikit-Learn.” scikit. Accessed April 22, 2024. https://scikit-learn.org/stable/index.html. <br>
