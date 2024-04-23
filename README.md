@@ -18,7 +18,7 @@ The main archictecture for Webscraper consists of Scrapy, Scikit-Learn, Pickle, 
 
 ## Operation
 ### Installation
-This repository can be forked and cloned for use. Webscraper is a python program, therefore python 3.11+ is required. The libraries consisting of Scrapy, Scikit-Learn, Pickle, Flask, Collections, NumPy, and Pathlib must be installed. The PowerShell file installs.ps1 can be used to install these dependencies.
+This repository can be forked and cloned for use. Webscraper is a python program, therefore python 3.10+ is required. The libraries consisting of Scrapy, Scikit-Learn, Pickle, Flask, Collections, NumPy, and Pathlib must be installed. The PowerShell file installs.ps1 can be used to install these dependencies.
 
 ### Usage
 The wiki_spider.py can be run as is. The initial seed can also be changed to another Wikipedia article.
@@ -32,7 +32,7 @@ Changing the value to the key/ value pair for "query" changes your query.
 Webscraper is currently separated in its features. Manual input is required for interaction between their functions. I was unable to create seamleass use between the components. However, each of the components work properly separately. When changed from Wikipedia articles, the portion of the crawler that searches the table of contents will prevent proper use.
 
 ## Data Sources
-The only data sources are the information for the libraries. The library links are:
+The only data sources are the information for the libraries. The library links are: <br>
 Scrapy- https://scrapy.org/ <br>
 Scikit-Learn- https://scikit-learn.org/stable/index.html <br>
 Pickle- https://docs.python.org/3/library/pickle.html <br>
@@ -44,6 +44,12 @@ Pathlib- https://docs.python.org/3/library/pathlib.html <br>
 All data sources are held within the code. The base code and provided command(s) can be used as a test case.
 
 ## Source Code
-The dependencies for Webscraper are Scrapy, Scikit-Learn, Pickle, Flask, Collections, NumPy, and Pathlib
-
+The dependencies for Webscraper are Scrapy 2.11+, Scikit-Learn 1.2+, Pickle, Flask 2.2+, Collections, NumPy, and Pathlib. Python 3.10+ is required.
+`
+    def parse(self, response):
+        page = response.url.split("/")[-1]
+        filename = f"Wiki-{page}.html"
+        Path(filename).write_bytes(response.body)
+        self.log(f"Saved file {filename}")
+`
 ## Bibliography
