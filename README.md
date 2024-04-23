@@ -45,11 +45,11 @@ All data sources are held within the code. The base code and provided command(s)
 
 ## Source Code
 The dependencies for Webscraper are Scrapy 2.11+, Scikit-Learn 1.2+, Pickle, Flask 2.2+, Collections, NumPy, and Pathlib. Python 3.10+ is required.
-`
-    def parse(self, response):
-        page = response.url.split("/")[-1]
-        filename = f"Wiki-{page}.html"
-        Path(filename).write_bytes(response.body)
-        self.log(f"Saved file {filename}")
+` <br>
+    def parse(self, response): <br>
+        page = response.url.split("/")[-1] <br>
+        filename = f"Wiki-{page}.html"  <br>
+        Path(filename).write_bytes(response.body) <br>
+        self.log(f"Saved file {filename}") <br>
 `
 ## Bibliography
